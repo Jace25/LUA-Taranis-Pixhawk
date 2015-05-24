@@ -17,7 +17,7 @@
     local function run(event)
 
 -- ###############################################################
--- Lipo Empty Warning voltage
+-- Lipo Empty Warning
 -- ###############################################################
 
     local four_low=13.4     -- 4 cells 4s | Warning
@@ -25,7 +25,7 @@
     local two_low=7.0       -- 2 cells 2s | Warning
 
 -- ###############################################################
--- Lipo Full voltage
+-- Lipo Full
 -- ###############################################################
 
     local four_high=16.8    -- 4 cells 4s
@@ -77,8 +77,9 @@
     else
         lcd.drawNumber(4,55, batt_sum * 100  ,PREC2 + LEFT)
     end
-        lcd.drawText(lcd.getLastPos(), 55, "v ", 0)
-        lcd.drawText(lcd.getLastPos(), 55,battypestr,0)
+
+    lcd.drawText(lcd.getLastPos(), 55, "v ", 0)
+    lcd.drawText(lcd.getLastPos(), 55,battypestr,0)
 
 -- ###############################################################
 -- Timer
@@ -92,7 +93,7 @@
 -- Clock
 -- ###############################################################
 
-     lcd.drawText(98,45, "Uhr:",SMLSIZE,0)
+     lcd.drawText(98,45, "Clock:",SMLSIZE,0)
      lcd.drawTimer(133, 41, getValue(190), MIDSIZE)
 
 -- ###############################################################
