@@ -6,7 +6,9 @@ It displays the voltage and current, beside the current time and a simple timer 
 Also RSSI is displayed on the left side. All values are based on converted mavlink Data.
 ## Screenshots
 ![Displayed content while in user controlled mode](https://raw.githubusercontent.com/Jace25/LUA-Taranis-Pixhawk/master/lua1.JPG)
+Displayed content while in user controlled mode
 ![Displayed content while in GPS controlled mode](https://raw.githubusercontent.com/Jace25/LUA-Taranis-Pixhawk/master/lua2.JPG)
+Displayed content while in GPS controlled mode
 
 ## Flightcontroller Setup
 1. Connect the Pixhawk with a RS232 TTL level converter (not need to be a FrSky, a cheaper one from Ebay also works fine (watch for correct specifications)) and connect RS232 TTL level converter with your Frysky Transmitter
@@ -20,3 +22,7 @@ Also RSSI is displayed on the left side. All values are based on converted mavli
 4. Create a new Folder inside the "SCRIPTS" folder, which has the exact name of your model (eg. Discovery)
 5. Copy the lua script from the just downloaded "SCRIPTS/Modelname" folder inside your previously created folder
 6 Start your Taranis an long press "PAGE"-Button
+
+##useful links
+1. http://copter.ardupilot.com/wiki/common-optional-hardware/common-telemetry-landingpage/common-frsky-telemetry/ (How to connect your Converter)
+2. http://fpv-community.de/showthread.php?63147-Telemetriedaten-vom-AUAV-X2-mit-D4R-II (How to connect a AUAV-X2 or Pixhawk with a D4R-II)
