@@ -11,7 +11,7 @@ Displayed content while in user controlled mode
 Displayed content while in GPS controlled mode
 
 ## Flightcontroller Setup
-1. Connect the Pixhawk with a RS232 TTL level converter (not need to be a FrSky, a cheaper one from Ebay also works fine (watch for correct specifications)) and connect RS232 TTL level converter with your Frysky Transmitter
+1. Connect the Pixhawk with a RS232 TTL level converter (not need to be a FrSky, a cheaper one from Ebay also works fine (watch for correct specifications)) and connect RS232 TTL level converter with your Frysky Receiver
 2. Activate the FrSky D protocol in the parameters for the appropriate port
 
 ## Taranis Setup
