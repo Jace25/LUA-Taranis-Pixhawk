@@ -1,6 +1,6 @@
 # Readme
 This Script should work with every Pixhawk (Pixhawk, Fixhawk, AUAV-X2, etc.) which
-is connected to a FrSky D-Transmitter (D4R, D8R)
+is connected to a FrSky D-Receiver (D4R, D8R)
 
 It displays the voltage and current, beside the current time and a simple timer below the currently used flightmode.
 Also RSSI is displayed on the left side. All values are based on converted mavlink Data.
