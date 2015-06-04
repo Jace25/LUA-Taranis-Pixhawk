@@ -18,10 +18,10 @@ Displayed content while in GPS controlled mode
 1. Make sure you have LUA-Scripting enabled
 2. If you dont have a folder "SCRIPTS", create it in your Sd's root
 3. Download the scripts folder from here
-3. Copy the "BMP" Folder from the just downloaded "SCRIPTS" Folder to your Taranis "SCRIPTS" folder
-4. Create a new Folder inside the "SCRIPTS" folder, which has the exact name of your model (eg. Discovery)
-5. Copy the lua script from the just downloaded "SCRIPTS/Modelname" folder inside your previously created folder
-6 Start your Taranis an long press "PAGE"-Button
+4. Copy the "BMP" Folder from the just downloaded "SCRIPTS" Folder to your Taranis "SCRIPTS" folder
+5. Create a new Folder inside the "SCRIPTS" folder, which has the exact name of your model (eg. Discovery)
+6. Copy the lua script from the just downloaded "SCRIPTS/Modelname" folder inside your previously created folder
+7. Start your Taranis an long press "PAGE"-Button
 
 ##useful links
 1. http://copter.ardupilot.com/wiki/common-optional-hardware/common-telemetry-landingpage/common-frsky-telemetry/ (How to connect your Converter)
