@@ -37,22 +37,22 @@
 -- ###############################################################
 
     local battype = 3
-    local battypestr="3S"
+    local battypestr="3S, "
     local percent=0
     local batt_sum = getValue("vfas")
 
     if batt_sum>3 then
         battype=math.ceil(batt_sum/4.25)
     if battype==4 then
-      battypestr="4S"
+      battypestr="4S, "
       percent = (batt_sum-four_low)*(100/(four_high-four_low))
     end
     if battype==3 then
-      battypestr="3S"
+      battypestr="3S, "
       percent = (batt_sum-three_low)*(100/(three_high-three_low))
     end
     if battype==2 then
-      battypestr="2S"
+      battypestr="2S, "
       percent = (batt_sum-two_low)*(100/(two_high-two_low))
     end
     end
@@ -80,40 +80,40 @@
 
     lcd.drawText(lcd.getLastPos(), 55, "v ", 0)
     lcd.drawText(lcd.getLastPos(), 55,battypestr,0)
+    lcd.drawText(lcd.getLastPos(), 55, getValue("consumption"), 0)
+    lcd.drawText(lcd.getLastPos(), 55, ' mAh Total', 0)
 
 -- ###############################################################
 -- Timer
 -- ###############################################################
 
     local timer = model.getTimer(0)
-     lcd.drawText(98, 33, "Timer:",SMLSIZE, 0)
-     lcd.drawTimer(133, 29, timer.value, MIDSIZE)
+    lcd.drawText(38, 33, "Timer: ",SMLSIZE, 0)
+    lcd.drawTimer(lcd.getLastPos(), 29, timer.value, MIDSIZE)
 
 -- ###############################################################
--- Clock
+-- Altitude
 -- ###############################################################
 
-     lcd.drawText(98,45, "Clock:",SMLSIZE,0)
-     lcd.drawTimer(133, 41, getValue(190), MIDSIZE)
+    lcd.drawText(102,45, "Alt: ",SMLSIZE,0)
+    lcd.drawText(lcd.getLastPos(), 41, getValue("altitude"), MIDSIZE)
+    lcd.drawText(lcd.getLastPos(), 45, 'm', 0)
 
 -- ###############################################################
--- Throttle in %
+-- Distance
 -- ###############################################################
 
-    function round(num, idp)
-    local mult = 10^(idp or 0)
-    return math.floor(num * mult + 0.5) / mult
-    end
-
-     lcd.drawText(38, 33,"THR %: ",SMLSIZE, 0)
-     lcd.drawText(72,29,round((getValue(MIXSRC_Thr)/10.24)/2+50,0),MIDSIZE,0)
+    lcd.drawText(102,33, "Dist: ",SMLSIZE)
+    lcd.drawText(lcd.getLastPos(), 29, getValue("distance"), MIDSIZE)
+    lcd.drawText(lcd.getLastPos(), 33, 'm', 0)
 
 -- ###############################################################
 -- Current
 -- ###############################################################
 
-    lcd.drawText(38, 45, "CUR A:",SMLSIZE)
-    lcd.drawText(72, 41, getValue("current"),MIDSIZE)
+    lcd.drawText(38, 45, "Cur: ",SMLSIZE)
+    lcd.drawText(lcd.getLastPos(), 41, getValue("current"),MIDSIZE)
+    lcd.drawText(lcd.getLastPos(), 45, 'A', 0)
 
 -- ###############################################################
 -- Flightmodes
@@ -149,7 +149,6 @@
     if flightModeNumber < 1 or flightModeNumber > 17 then
         flightModeNumber = 13
     end
-
     lcd.drawText(70, 1, FlightMode[flightModeNumber].Name, MIDSIZE)
 
 -- ###############################################################
@@ -163,10 +162,22 @@
     end
 
 -- ###############################################################
--- Display misc data
+-- GPS Fix
 -- ###############################################################
 
-     lcd.drawText(85,55,"Jace25 ",SMLSIZE)
+    local satRaw = getValue("temp2")
+    local satCount =  (satRaw - (satRaw%10))/10
+    local gpsFix = (satRaw%10)
+
+    if gpsFix >= 3 then
+        lcd.drawText(75, 15, "3D FIX, ", SMLSIZE)
+        lcd.drawText(lcd.getLastPos(),15, satCount, SMLSIZE)
+        lcd.drawText(lcd.getLastPos(),15, ' Sats', SMLSIZE)
+    else
+        lcd.drawText(75,15, "NO FIX, ", BLINK+SMLSIZE)
+        lcd.drawText(lcd.getLastPos(),15, satCount, BLINK+SMLSIZE)
+        lcd.drawText(lcd.getLastPos(),15, ' Sats', BLINK+SMLSIZE)
+    end
 
 -- ###############################################################
 -- Display RSSI data
