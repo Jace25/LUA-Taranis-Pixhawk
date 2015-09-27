@@ -114,7 +114,7 @@
     lcd.drawText(lcd.getLastPos(), 45, 'm', 0)
 
 -- ###############################################################
--- Distance
+-- Distance TODO
 -- ###############################################################
 
    -- local distanceid = getTelemetryId('distance')
@@ -231,8 +231,8 @@
           lcd.drawPixmap(164, 1, "/SCRIPTS/BMP/RSSI00.bmp")
     end
 
-      lcd.drawChannel(178, 55, getValue(rssiId), LEFT)
-      lcd.drawText(lcd.getLastPos(), 56, "dB", SMLSIZE)
+      lcd.drawText(178, 56, getValue(rssiId), SMLSIZE)
+      lcd.drawText(lcd.getLastPos(), 56, " dB", SMLSIZE)
 
 end
 
