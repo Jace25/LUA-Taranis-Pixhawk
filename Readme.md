@@ -28,12 +28,12 @@ Displayed content while in GPS controlled mode
 11. Now its your turn to name the sensors right, so the lua script can make use of them. Also, each sensor has to set to raw data. Naming is casesensitive!
 
 ### Sensor Setup
-VFAS -> Lipo Voltage
-Alt -> Altitude
-Curr -> Current drain
-Tem1 -> This sensor was found as Temp besides another sensor named temp. The sensor, which sends the flightmode data has to be named to Tem1
-Temp -> GPS Fix (something like 103 for 10 satelites and 3d fix or 93 for 9 satelites and 3d fix)
-RSSI -> Rssi Value
+* VFAS -> Lipo Voltage
+* Alt -> Altitude
+* Curr -> Current drain
+* Tem1 -> This sensor was found as Temp besides another sensor named temp. The sensor, which sends the flightmode data has to be named to Tem1
+* Temp -> GPS Fix (something like 103 for 10 satelites and 3d fix or 93 for 9 satelites and 3d fix)
+* RSSI -> Rssi Value
 
 ## Taranis Setup (if OpenTX < 2.1.x)
 1. Make sure you have LUA-Scripting enabled
