@@ -5,9 +5,14 @@ is connected to a FrSky D-Receiver (D4R, D8R)
 It displays the voltage, current and total comsumption, beside the altitude and distance from home below the currently used flightmode and 3D Fix informations.
 Also RSSI is displayed on the left side. All values are based on converted mavlink Data.
 ## Screenshots
-![Displayed content while in user controlled mode](https://raw.githubusercontent.com/Jace25/LUA-Taranis-Pixhawk/master/lua1.JPG)
+![Displayed content while in user controlled mode]
+(https://raw.githubusercontent.com/Jace25/LUA-Taranis-Pixhawk/master/lua1.JPG)
+
 Displayed content while in user controlled mode
-![Displayed content while in GPS controlled mode](https://raw.githubusercontent.com/Jace25/LUA-Taranis-Pixhawk/master/lua2.JPG)
+
+![Displayed content while in GPS controlled mode]
+(https://raw.githubusercontent.com/Jace25/LUA-Taranis-Pixhawk/master/lua2.JPG)
+
 Displayed content while in GPS controlled mode
 
 ## Flightcontroller Setup
